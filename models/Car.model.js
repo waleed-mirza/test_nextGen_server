@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const Car = new mongoose.Schema(
+const carSchema = new mongoose.Schema(
   {
     userid: { type: String, required: true },
     model: { type: String, required: true },
@@ -11,4 +11,4 @@ const Car = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Car", Car);
+module.exports = mongoose.model("Car", carSchema);

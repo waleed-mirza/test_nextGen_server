@@ -3,7 +3,6 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 var bodyParser = require("body-parser");
 const path = require("path");
-const multer = require("multer");
 
 require("dotenv").config();
 
@@ -35,8 +34,8 @@ app.get("/", (req, res) => {
 global.__basedir = __dirname;
 
 // route imports
-const userRouter = require("./routes/user");
-const carRouter = require("./routes/car");
+const userRouter = require("./routes/user.js");
+const carRouter = require("./routes/car.js");
 
 app.use("/tmp", express.static(path.join(__dirname, "/tmp")));
 
