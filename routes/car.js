@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Car = require("../models/car.model");
+const Car = require("../models/carservice.model");
 const multer = require("multer");
 const path = require("path");
 
