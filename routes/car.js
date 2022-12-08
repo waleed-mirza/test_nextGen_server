@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const multer = require("multer");
 const path = require("path");
-const Car = require("../models/car.model");
+// const Car = require("../models/car.model");
 
 // heelo
 
@@ -30,14 +30,16 @@ router.post("/insertcar", upload.array("images"), async (req, res) => {
     }
     console.log(req.body);
 
-    const carData = new Car({
-      model: req.body.carmodel,
-      price: req.body.price,
-      images: images,
-      phoneno: req.body.phoneno,
-      userid: req.body.userid,
-    });
-    const data = await carData.save();
+    // const carData = new Car({
+    //   model: req.body.carmodel,
+    //   price: req.body.price,
+    //   images: images,
+    //   phoneno: req.body.phoneno,
+    //   userid: req.body.userid,
+    // });
+    // const data = await carData.save();
+
+    let data = {}
     res.status(200).json({
       status: "ok",
       result: data,
